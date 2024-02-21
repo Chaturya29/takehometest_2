@@ -16,14 +16,20 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f9f9f9; /* Set a light background color */
+            padding-top: 100px; /* Set padding for the fixed header */
         }
 
         .navbar {
             height: 100px; /* Set height of the header to 100px */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #fee;
             display: flex;
             align-items: center;
-            background-color: #fee;
             padding: 0 20px;
+            z-index: 1000; /* Ensure the header is on top */
         }
 
         .logo {
@@ -53,6 +59,7 @@
 
         .body {
             padding: 20px;
+            padding-top: 140px; /* Add additional padding for the fixed header */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -77,18 +84,20 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-items: center; /* Align items vertically */
+            align-items: flex-start; /* Align items to the start */
+            gap: 20px; /* Add gap between items */
+            max-width: 1200px; /* Limit maximum width of the tours container */
+            margin-top: 20px; /* Add margin to separate from the heading */
         }
 
         .places {
-            width: 300px;
-            margin-bottom: 20px;
+            flex: 1;
+            max-width: 300px; /* Limit maximum width of each place */
             text-align: center;
         }
 
         .places img {
             width: 100%;
-            max-width: 100%; /* Ensure images don't exceed their container */
             border-radius: 12px;
         }
 
@@ -116,6 +125,11 @@
             background-color: #333;
             color: #fff;
             padding: 0 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Ensure the footer is on top */
         }
 
         /* Responsive adjustments */
@@ -134,6 +148,7 @@
 
             .body {
                 padding: 10px; /* Adjust body padding for smaller screens */
+                padding-top: 120px; /* Adjust padding for the fixed header */
             }
 
             .heading h1 {
@@ -147,6 +162,7 @@
             .tours {
                 flex-direction: column; /* Arrange tours vertically for smaller screens */
                 align-items: center; /* Align items horizontally */
+                gap: 10px; /* Reduce gap between items */
             }
 
             .places {
