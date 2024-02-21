@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,10 +15,11 @@
 
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9; /* Set a light background color */
         }
 
         .navbar {
-            height: 10vh;
+            height: 100px; /* Set height of the header to 100px */
             display: flex;
             align-items: center;
             background-color: #fee;
@@ -52,6 +53,9 @@
 
         .body {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .heading {
@@ -73,6 +77,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            align-items: center; /* Align items vertically */
         }
 
         .places {
@@ -83,6 +88,7 @@
 
         .places img {
             width: 100%;
+            max-width: 100%; /* Ensure images don't exceed their container */
             border-radius: 12px;
         }
 
@@ -103,7 +109,7 @@
         }
 
         .footer {
-            height: 10vh;
+            height: 100px; /* Set height of the footer to 100px */
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -114,28 +120,37 @@
 
         /* Responsive adjustments */
         @media screen and (max-width: 768px) {
-            .navbar, .footer {
-                height: 8vh; /* Adjust height for smaller screens */
+            .navbar {
+                height: 80px; /* Adjust header height for smaller screens */
             }
 
             .logo h1 {
-                font-size: 1.2rem; /* Adjust font size for smaller screens */
+                font-size: 1.2rem; /* Adjust logo font size for smaller screens */
             }
 
             .menu ul li a {
-                font-size: 0.9rem; /* Adjust font size for smaller screens */
+                font-size: 0.9rem; /* Adjust menu font size for smaller screens */
+            }
+
+            .body {
+                padding: 10px; /* Adjust body padding for smaller screens */
             }
 
             .heading h1 {
-                font-size: 2rem; /* Adjust font size for smaller screens */
+                font-size: 2rem; /* Adjust heading font size for smaller screens */
             }
 
             .heading p {
-                font-size: 0.9rem; /* Adjust font size for smaller screens */
+                font-size: 0.9rem; /* Adjust paragraph font size for smaller screens */
+            }
+
+            .tours {
+                flex-direction: column; /* Arrange tours vertically for smaller screens */
+                align-items: center; /* Align items horizontally */
             }
 
             .places {
-                width: 90%; /* Adjust width for smaller screens */
+                width: 90%; /* Adjust place width for smaller screens */
             }
         }
     </style>
