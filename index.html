@@ -1,26 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"> <!-- Include charset meta tag -->
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
         .navbar {
-            height: 100px; /* Set height of the header to 100px */
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            background-color: #fee;
+            padding: 0 20px;
+        }
+
+        .logo {
+            flex: 1;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu ul li {
+            margin-right: 20px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1rem;
+        }
+
+        .body {
+            padding: 20px;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .heading h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .heading p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .tours {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .places {
+            width: 300px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .places img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .places h2 {
+            font-size: 1.5rem;
+            color: red;
+            margin-top: 10px;
+        }
+
+        .places a {
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 12px;
+            padding: 10px 20px;
+            background-color: #fff;
         }
 
         .footer {
-            height: 100px; /* Set height of the footer to 100px */
+            height: 10vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 0 20px;
         }
     </style>
-    <script>
-        function showAlert() {
-            alert("Hello, world!");
-        }
-    </script>
 </head>
 <body>
     <div class="navbar">
@@ -44,32 +136,26 @@
     <div class="body">
         <div class="heading">
             <h1>Travel With Us</h1>
-            <br>
-            <p>We are travel experts. Our award-winning travel brands create unique experiences for our guests around the world. From wildlife encounters to polar expeditions, from cultural tours to yachting adventures, our business is not just about showing people the world, but designing new ways to experience it. </p>
-            <br>
-            <br>
-            <button onclick="showAlert()">Learn More</button> <!-- Changed to button -->
+            <p>We are travel experts. Our award-winning travel brands create unique experiences for our guests around the world. From wildlife encounters to polar expeditions, from cultural tours to yachting adventures, our business is not just about showing people the world, but designing new ways to experience it.</p>
+            <button onclick="showAlert()">Learn More</button>
         </div>
         <div class="tours">
             <div class="places">
                 <h2>Australia</h2>
-                <img src="img1.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
-                <br>
-                <br>
+                <img src="img1.jpg" alt="Australia">
+                <br><br>
                 <a href="#">Book Now 15% OFF</a>
             </div>
             <div class="places">
                 <h2>New York</h2>
-                <img src="img2.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
-                <br>
-                <br>
+                <img src="img2.jpg" alt="New York">
+                <br><br>
                 <a href="#">Book Now 20% OFF</a>
             </div>
             <div class="places">
                 <h2>Thailand</h2>
-                <img src="img3.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
-                <br>
-                <br>
+                <img src="img3.jpg" alt="Thailand">
+                <br><br>
                 <a href="#">Book Now 25% OFF</a>
             </div>
         </div>
