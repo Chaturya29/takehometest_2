@@ -1,191 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .navbar {
+            height: 100px; /* Set height of the header to 100px */
+        }
+
+        .footer {
+            height: 100px; /* Set height of the footer to 100px */
+        }
+    </style>
     <script>
         function showAlert() {
             alert("Hello, world!");
         }
     </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f9f9f9; 
-            padding-top: 100px; 
-        }
-
-        .navbar {
-            height: 100px; 
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: #fee;
-            display: flex;
-            align-items: center;
-            padding: 0 20px;
-            z-index: 1000; 
-        }
-
-        .logo {
-            flex: 1;
-        }
-
-        .logo h1 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-
-        .menu ul {
-            list-style: none;
-            display: flex;
-            align-items: center;
-        }
-
-        .menu ul li {
-            margin-right: 20px;
-        }
-
-        .menu ul li a {
-            text-decoration: none;
-            color: #000;
-            font-size: 1rem;
-        }
-
-        .body {
-            padding: 20px;
-            padding-top: 140px; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .heading {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .heading h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .heading p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .tours {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: flex-start; 
-            gap: 20px;
-            max-width: 1200px; 
-            margin-top: 20px; 
-        }
-
-        .places {
-            flex: 1;
-            max-width: 300px; 
-            text-align: center;
-        }
-
-        .places img {
-            width: 100%;
-            border-radius: 12px;
-        }
-
-        .places h2 {
-            font-size: 1.5rem;
-            color: red;
-            margin-top: 10px;
-        }
-
-        .places a {
-            text-decoration: none;
-            color: red;
-            font-weight: bold;
-            font-size: 1rem;
-            border-radius: 12px;
-            padding: 10px 20px;
-            background-color: #fff;
-        }
-
-        .footer {
-            height: 100px; 
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #333;
-            color: #fff;
-            padding: 0 20px;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000; 
-        }
-
-        /* Responsive adjustments */
-        @media screen and (max-width: 768px) {
-            .navbar {
-                height: 80px;
-            }
-
-            .logo h1 {
-                font-size: 1.2rem; 
-            }
-
-            .menu ul li a {
-                font-size: 0.9rem;
-            }
-
-            .body {
-                padding: 10px; 
-                padding-top: 120px; 
-            }
-
-            .heading h1 {
-                font-size: 2rem; 
-            }
-
-            .heading p {
-                font-size: 0.9rem; 
-            }
-
-            .tours {
-                flex-direction: column; 
-                align-items: center; 
-                gap: 10px; 
-            }
-
-            .places {
-                width: 90%; 
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="navbar">
         <div class="logo">
-            <h1>Travelopia</h1>
+            <h1>Travel</h1>
         </div>
         <div class="menu">
             <ul>
                 <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
                 <li><a href="#">Places</a></li>
+                <li><a href="#">Discounts</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="#">Booking</a></li>
             </ul>
         </div>
         <div class="signup">
@@ -195,35 +42,43 @@
     <div class="body">
         <div class="heading">
             <h1>Travel With Us</h1>
-            <p>We are travel experts.</p>
-            <button onclick="showAlert()">Learn More</button>
+            <br>
+            <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. </p>
+            <br>
+            <br>
+            <button onclick="showAlert()">Learn More</button> <!-- Changed to button -->
         </div>
         <div class="tours">
             <div class="places">
                 <h2>Australia</h2>
-                <img src="img1.jpg" alt="Australia">
-                <br><br>
+                <img src="img1.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
+                <br>
+                <br>
                 <a href="#">Book Now 15% OFF</a>
             </div>
             <div class="places">
                 <h2>New York</h2>
-                <img src="img2.jpg" alt="New York">
-                <br><br>
+                <img src="img2.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
+                <br>
+                <br>
                 <a href="#">Book Now 20% OFF</a>
             </div>
             <div class="places">
                 <h2>Thailand</h2>
-                <img src="img3.jpg" alt="Thailand">
-                <br><br>
+                <img src="img3.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
+                <br>
+                <br>
                 <a href="#">Book Now 25% OFF</a>
             </div>
         </div>
     </div>
     <div class="footer">
-        <a href="#">T&C</a>
+        <a href="#">Copyright</a>
+        <a href="#">Terms and Conditions</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Cookies</a>
-        
+        <a href="#">Complaints</a>
     </div>
 </body>
 </html>
