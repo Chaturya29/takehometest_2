@@ -6,6 +6,11 @@
     <title>Travel Website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script>
+        function showAlert() {
+            alert("Hello, world!");
+        }
+    </script>
     <style>
         * {
             margin: 0;
@@ -15,12 +20,12 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f9f9f9; /* Set a light background color */
-            padding-top: 100px; /* Set padding for the fixed header */
+            background-color: #f9f9f9; 
+            padding-top: 100px; 
         }
 
         .navbar {
-            height: 100px; /* Set height of the header to 100px */
+            height: 100px; 
             position: fixed;
             top: 0;
             left: 0;
@@ -29,7 +34,7 @@
             display: flex;
             align-items: center;
             padding: 0 20px;
-            z-index: 1000; /* Ensure the header is on top */
+            z-index: 1000; 
         }
 
         .logo {
@@ -59,7 +64,7 @@
 
         .body {
             padding: 20px;
-            padding-top: 140px; /* Add additional padding for the fixed header */
+            padding-top: 140px; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -84,15 +89,15 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-items: flex-start; /* Align items to the start */
-            gap: 20px; /* Add gap between items */
-            max-width: 1200px; /* Limit maximum width of the tours container */
-            margin-top: 20px; /* Add margin to separate from the heading */
+            align-items: flex-start; 
+            gap: 20px;
+            max-width: 1200px; 
+            margin-top: 20px; 
         }
 
         .places {
             flex: 1;
-            max-width: 300px; /* Limit maximum width of each place */
+            max-width: 300px; 
             text-align: center;
         }
 
@@ -118,7 +123,7 @@
         }
 
         .footer {
-            height: 100px; /* Set height of the footer to 100px */
+            height: 100px; 
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -129,44 +134,44 @@
             bottom: 0;
             left: 0;
             right: 0;
-            z-index: 1000; /* Ensure the footer is on top */
+            z-index: 1000; 
         }
 
         /* Responsive adjustments */
         @media screen and (max-width: 768px) {
             .navbar {
-                height: 80px; /* Adjust header height for smaller screens */
+                height: 80px;
             }
 
             .logo h1 {
-                font-size: 1.2rem; /* Adjust logo font size for smaller screens */
+                font-size: 1.2rem; 
             }
 
             .menu ul li a {
-                font-size: 0.9rem; /* Adjust menu font size for smaller screens */
+                font-size: 0.9rem;
             }
 
             .body {
-                padding: 10px; /* Adjust body padding for smaller screens */
-                padding-top: 120px; /* Adjust padding for the fixed header */
+                padding: 10px; 
+                padding-top: 120px; 
             }
 
             .heading h1 {
-                font-size: 2rem; /* Adjust heading font size for smaller screens */
+                font-size: 2rem; 
             }
 
             .heading p {
-                font-size: 0.9rem; /* Adjust paragraph font size for smaller screens */
+                font-size: 0.9rem; 
             }
 
             .tours {
-                flex-direction: column; /* Arrange tours vertically for smaller screens */
-                align-items: center; /* Align items horizontally */
-                gap: 10px; /* Reduce gap between items */
+                flex-direction: column; 
+                align-items: center; 
+                gap: 10px; 
             }
 
             .places {
-                width: 90%; /* Adjust place width for smaller screens */
+                width: 90%; 
             }
         }
     </style>
@@ -215,11 +220,10 @@
         </div>
     </div>
     <div class="footer">
-        <a href="#">Copyright</a>
-        <a href="#">Terms and Conditions</a>
+        <a href="#">T&C</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Cookies</a>
-        <a href="#">Complaints</a>
+        
     </div>
 </body>
 </html>
