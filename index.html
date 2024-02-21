@@ -21,6 +21,21 @@
             margin: 0;
             padding: 0;
         }
+
+        .large-button {
+            padding: 20px 40px; /* Adjust padding to make the button larger */
+            font-size: 24px; /* Increase font size */
+            border-radius: 20px; /* Add border radius for rounded corners */
+            background-color: #FFD700; /* Bright yellow color */
+            color: #fff; /* Text color */
+            border: none; /* Remove border */
+            cursor: pointer; /* Add cursor pointer on hover */
+            transition: background 0.3s ease-in-out; /* Smooth transition effect */
+        }
+
+        .large-button:hover {
+            background-color: #FFA500; /* Change background color to orange on hover */
+        }
     </style>
     <script>
         function showAlert() {
@@ -51,7 +66,7 @@
             <p>We are Travelling Experts </p>
             <br>
             <br>
-            <button onclick="showAlert()">Click Here</button> 
+            <button class="large-button" onclick="showAlert()">Click Here</button> <!-- Apply large-button class to the button -->
         </div>
         <div class="tours">
             <div class="places">
@@ -75,13 +90,7 @@
                 <br>
                 <a href="#">Book Now 25% OFF</a>
             </div>
-            <div class="places">
-                <h2>United States</h2>
-                <img src="img4.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
-                <br>
-                <br>
-                <a href="#">Book Now 55% OFF</a>
-            </div>
+        
         </div>
     </div>
     <div class="footer">
