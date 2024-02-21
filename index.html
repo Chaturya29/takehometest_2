@@ -6,7 +6,6 @@
     <title>Travel Website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         * {
             margin: 0;
@@ -111,6 +110,33 @@
             background-color: #333;
             color: #fff;
             padding: 0 20px;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .navbar, .footer {
+                height: 8vh; /* Adjust height for smaller screens */
+            }
+
+            .logo h1 {
+                font-size: 1.2rem; /* Adjust font size for smaller screens */
+            }
+
+            .menu ul li a {
+                font-size: 0.9rem; /* Adjust font size for smaller screens */
+            }
+
+            .heading h1 {
+                font-size: 2rem; /* Adjust font size for smaller screens */
+            }
+
+            .heading p {
+                font-size: 0.9rem; /* Adjust font size for smaller screens */
+            }
+
+            .places {
+                width: 90%; /* Adjust width for smaller screens */
+            }
         }
     </style>
 </head>
