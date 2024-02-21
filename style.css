@@ -149,9 +149,12 @@
 }
 
 .places img {
-    width: 100%;
+    width: 100%; /* Adjusted width to 100% to make images responsive */
+    height: 250px; /* Fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
     border-radius: 12px;
 }
+
 
 .places h2 {
     font-size: 35px;
