@@ -86,13 +86,12 @@
     font-size: 2em;
 }
 
-.body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    padding-top: 100px; /* Adjust padding for the fixed header */
+body {
+    background-image: url('img1.jpg');
+    background-size: cover; /* Adjust background size */
+    background-repeat: no-repeat; /* Prevent background from repeating */
 }
+
 
 .heading {
     text-align: center;
