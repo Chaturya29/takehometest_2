@@ -103,6 +103,18 @@
     color: #fff;
     padding: 0 20px; /* Added padding for better spacing */
 }
+.heading {
+    width: 100%; /* Adjusted width to 100% for responsiveness */
+    text-align: justify; /* Added text-align property to justify the content */
+    color: #fff;
+    padding: 0 20px; /* Added padding for better spacing */
+}
+
+.heading p {
+    text-align: justify; /* Added text-align property to justify the paragraph content */
+}
+
+
 
 .heading h1 {
     font-size: 40px;
