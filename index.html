@@ -18,6 +18,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             color: white; /* Set default text color */
+            position: relative; /* Position relative for overlay */
         }
 
         header {
@@ -32,24 +33,30 @@
             flex: 1; /* Grow and shrink as necessary to fill remaining space */
             display: flex;
             flex-direction: column; /* Arrange children vertically */
+            position: relative; /* Position relative for overlay */
         }
 
         .heading {
             text-align: center;
             padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Ensure the content is above the overlay */
         }
 
         .large-button {
-            padding: 20px 40px;
-            font-size: 24px;
+            padding: 15px 30px; /* Decrease button size */
+            font-size: 20px; /* Decrease button font size */
             border-radius: 20px;
             background-color: #FFD700;
             color: #fff;
             border: none;
             cursor: pointer;
             transition: background 0.3s ease-in-out;
-            margin: 0 auto; /* Center horizontally */
             display: block; /* Ensure block-level display for centering */
+            margin-top: 20px; /* Add margin for spacing */
         }
 
         .large-button:hover {
@@ -63,6 +70,18 @@
             align-items: center;
             justify-content: center;
         }
+
+        /* Overlay style */
+        main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Translucent black overlay */
+            z-index: 0; /* Ensure the overlay is below the content */
+        }
     </style>
 </head>
 <body>
@@ -73,7 +92,6 @@
     <main>
         <div class="heading">
             <h2>Travel With Us</h2>
-            <p>We are travel experts. Our award-winning travel brands create unique experiences for our guests around the world. From wildlife encounters to polar expeditions, from cultural tours to yachting adventures, our business is not just about showing people the world, but designing new ways to experience it.</p>
             <button class="large-button" onclick="showAlert()">Click Here</button>
         </div>
     </main>
