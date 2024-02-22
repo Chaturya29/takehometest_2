@@ -1,100 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Travel Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+        .navbar {
+            height: 100px; 
+        }
+
+        .footer {
+            height: 100px; 
+        }
         body {
+            background-image: url('background.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat; 
+            font-family: 'Poppins', sans-serif; 
             margin: 0;
             padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        header,footer {
-            height: 100px;
-            background-color: #615d5d;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        main {
-            flex-grow: 1;
-            position: relative;
-            overflow: hidden;
-        }
-
-        main img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; 
-        }
-        
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.35);
-        }
-
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #333;
-        }
-        h1{
-            font-size: 50px;
-            font-size-adjust: 0.58;
-            color: aliceblue;
-            text-shadow: 2px 2px 4px #000000;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #cced68;
-            color: rgb(75, 51, 51);
+        .large-button {
+            padding: 20px 40px;
+            font-size: 24px;
+            border-radius: 20px;
+            background-color: #FFD700;
+            color: #fff;
             border: none;
             cursor: pointer;
+            transition: background 0.3s ease-in-out;
         }
-        button:hover {
-            background-color: #1ece8d; 
-            color:lightblue;
-          }
 
+        .large-button:hover {
+            background-color: #FFA500;
+        }
+
+        .menu ul {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            padding: 0; /* Remove default padding */
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: #000;
+            padding: 5px 12px;
+            letter-spacing: 2px;
+            font-size: 18px;
+        }
+
+        .menu ul li a:hover {
+            border-bottom: 4px solid #000;
+            transition: 0.4s;
+        }
     </style>
-    <title>Page</title>
-</head>
-<body>
-    <header>
-        
-    </header>
-
-    <main>
-        <img src="background.jpg" alt="Background Image">
-        <div class="overlay"></div>
-        <div class="content">
-            <h1>TRAVELOPIA</h1>
-             <button onclick="showAlert()"><i class="fas fa-plane"></i> Fly Away!</button>
-        </div>
-    </main>
-
-    <footer>
-        
-    </footer>
-
     <script>
         function showAlert() {
-            alert("Hello, World!");
+            alert("Hello, world!");
         }
     </script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Travelopia</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="signup">
+            <a href="#">Sign Up</a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="heading">
+            <h1>Travel With Us</h1>
+            <br>
+            <p>We are travel experts. Our award-winning travel brands create unique experiences for our guests around the world. From wildlife encounters to polar expeditions, from cultural tours to yachting adventures, our business is not just about showing people the world, but designing new ways to experience it. </p>
+            <br>
+            <br>
+            <button class="large-button" onclick="showAlert()">Click Here</button>
+        </div>
+        <div class="tours">
+            <div class="places">
+                <h2>Australia</h2>
+                <img src="img1.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
+                <br>
+                <br>
+                <a href="#">Book Now 15% OFF</a>
+            </div>
+            <div class="places">
+                <h2>New York</h2>
+                <img src="img2.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
+                <br>
+                <br>
+                <a href="#">Book Now 20% OFF</a>
+            </div>
+            <div class="places">
+                <h2>Thailand</h2>
+                <img src="img3.jpg" style="width: 300px; height: 250px; border-radius: 12px;">
+                <br>
+                <br>
+                <a href="#">Book Now 25% OFF</a>
+            </div>
+        
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#">Copyright</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookies</a>
+        <a href="#">Complaints</a>
+    </div>
 </body>
 </html>
