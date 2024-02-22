@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        .navbar {
-            height: 100px; 
-        }
-
-        .footer {
-            height: 100px; 
-        }
         body {
-            background-image: url('background.jpg'); 
-            background-size: cover;
-            background-repeat: no-repeat; 
-            font-family: 'Poppins', sans-serif; 
             margin: 0;
             padding: 0;
+            min-height: 100vh; /* Set minimum height of the body to the viewport height */
+            display: flex;
+            flex-direction: column; /* Arrange children vertically */
+            font-family: 'Poppins', sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white; /* Set default text color */
+        }
+
+        header {
+            height: 100px;
+            background-color: #615d5d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            flex: 1; /* Grow and shrink as necessary to fill remaining space */
+            display: flex;
+            flex-direction: column; /* Arrange children vertically */
+        }
+
+        .heading {
+            text-align: center;
+            padding: 20px;
         }
 
         .large-button {
@@ -31,7 +48,7 @@
             border: none;
             cursor: pointer;
             transition: background 0.3s ease-in-out;
-            margin: 0 auto; /* Center button */
+            margin: 0 auto; /* Center horizontally */
             display: block; /* Ensure block-level display for centering */
         }
 
@@ -39,60 +56,40 @@
             background-color: #FFA500;
         }
 
-        .heading {
-            text-align: center; /* Center text */
-            color: #fff;
-            max-width: 800px; 
-            padding: 0 20px; 
-            margin: 0 auto; /* Center title */
+        footer {
+            height: 100px;
+            background-color: #615d5d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-        .heading h1 {
-            font-size: 40px;
-            margin-bottom: 20px; /* Add margin for separation */
-        }
-
-        .heading p {
-            text-align: justify; 
-        }
-
-        /* Remove tours class */
     </style>
-    <script>
-        function showAlert() {
-            alert("Hello, world!");
-        }
-    </script>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <h1>Travelopia</h1>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="signup">
-            <a href="#">Sign Up</a>
-        </div>
-    </div>
-    <div class="body">
+    <header>
+        <h1>Travelopia</h1>
+    </header>
+
+    <main>
         <div class="heading">
-            <h1>Travel With Us</h1>
-            <p>We are travel experts.</p>
+            <h2>Travel With Us</h2>
+            <p>We are travel experts. Our award-winning travel brands create unique experiences for our guests around the world. From wildlife encounters to polar expeditions, from cultural tours to yachting adventures, our business is not just about showing people the world, but designing new ways to experience it.</p>
             <button class="large-button" onclick="showAlert()">Click Here</button>
         </div>
-    </div>
-    <div class="footer">
+    </main>
+
+    <footer>
         <a href="#">Copyright</a>
         <a href="#">Terms and Conditions</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Cookies</a>
         <a href="#">Complaints</a>
-    </div>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert("Hello, World!");
+        }
+    </script>
 </body>
 </html>
