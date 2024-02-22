@@ -29,6 +29,29 @@
             justify-content: center;
         }
 
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto; /* Center the navbar */
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-right: 20px; /* Add space between list items */
+        }
+
+        .navbar ul li:last-child {
+            margin-right: 0; /* Remove margin from the last item */
+        }
+
         main {
             flex: 1; /* Grow and shrink as necessary to fill remaining space */
             display: flex;
@@ -86,7 +109,14 @@
 </head>
 <body>
     <header>
-        <h1>Travelopia</h1>
+        <div class="navbar">
+            <h1>Travelopia</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Places</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -98,9 +128,13 @@
 
     <footer>
         <a href="#">Copyright</a>
+        <span style="margin: 0 10px;">|</span>
         <a href="#">Terms and Conditions</a>
+        <span style="margin: 0 10px;">|</span>
         <a href="#">Privacy Policy</a>
+        <span style="margin: 0 10px;">|</span>
         <a href="#">Cookies</a>
+        <span style="margin: 0 10px;">|</span>
         <a href="#">Complaints</a>
     </footer>
 
