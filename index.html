@@ -10,15 +10,15 @@
         body {
             margin: 0;
             padding: 0;
-            min-height: 100vh; /* Set minimum height of the body to the viewport height */
+            min-height: 100vh;
             display: flex;
-            flex-direction: column; /* Arrange children vertically */
+            flex-direction: column; 
             font-family: 'Poppins', sans-serif;
             background-image: url('background.jpg');
             background-size: cover;
             background-repeat: no-repeat;
-            color: white; /* Set default text color */
-            position: relative; /* Position relative for overlay */
+            color: white;
+            position: relative; 
         }
 
         header {
@@ -32,9 +32,9 @@
         .navbar {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             width: 80%;
-            margin: 0 auto; /* Center the navbar */
+            margin: 0 auto; 
         }
 
         .navbar ul {
@@ -45,18 +45,18 @@
         }
 
         .navbar ul li {
-            margin-right: 20px; /* Add space between list items */
+            margin-right: 20px; 
+            color: white;
         }
 
         .navbar ul li:last-child {
-            margin-right: 0; /* Remove margin from the last item */
-        }
+            margin-right: 0;
 
         main {
-            flex: 1; /* Grow and shrink as necessary to fill remaining space */
+            flex: 1; 
             display: flex;
-            flex-direction: column; /* Arrange children vertically */
-            position: relative; /* Position relative for overlay */
+            flex-direction: column; 
+            position: relative;
         }
 
         .heading {
@@ -66,20 +66,20 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 1; /* Ensure the content is above the overlay */
+            z-index: 1; 
         }
 
         .large-button {
-            padding: 15px 30px; /* Decrease button size */
-            font-size: 20px; /* Decrease button font size */
+            padding: 15px 30px; 
+            font-size: 20px;
             border-radius: 20px;
             background-color: #FFD700;
             color: #fff;
             border: none;
             cursor: pointer;
             transition: background 0.3s ease-in-out;
-            display: block; /* Ensure block-level display for centering */
-            margin-top: 20px; /* Add margin for spacing */
+            display: block; 
+            margin-top: 20px; 
         }
 
         .large-button:hover {
@@ -94,7 +94,7 @@
             justify-content: center;
         }
 
-        /* Overlay style */
+       
         main::before {
             content: '';
             position: absolute;
@@ -102,8 +102,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Translucent black overlay */
-            z-index: 0; /* Ensure the overlay is below the content */
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 0; 
         }
     </style>
 </head>
@@ -111,11 +111,7 @@
     <header>
         <div class="navbar">
             <h1>Travelopia</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Places</a></li>
-            </ul>
+            
         </div>
     </header>
 
@@ -127,15 +123,13 @@
     </main>
 
     <footer>
-        <a href="#">Copyright</a>
-        <span style="margin: 0 10px;">|</span>
+        
         <a href="#">Terms and Conditions</a>
         <span style="margin: 0 10px;">|</span>
         <a href="#">Privacy Policy</a>
         <span style="margin: 0 10px;">|</span>
         <a href="#">Cookies</a>
-        <span style="margin: 0 10px;">|</span>
-        <a href="#">Complaints</a>
+       
     </footer>
 
     <script>
