@@ -4,20 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Page Component</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        .full-page {
-            position: relative;
-            width: 100%;
-            height: calc(100vh - 200px); /* Adjust height to fill remaining space */
-            background-image: url('background.jpg'); /* Image name only */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        header {
+            height: 100px;
+            background-color: #333; /* Sample color for the header */
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
+        main {
+            height: calc(100% - 200px); /* Full height minus header and footer */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            height: 100px;
+            background-color: #333; /* Sample color for the footer */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .full-page {
+            height: 100%;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         .overlay {
             position: absolute;
             top: 0;
@@ -26,28 +60,50 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
         }
+
         .content {
             text-align: center;
-            color: #fff;
+            color: white;
+            z-index: 1; /* Ensure content is above overlay */
+        }
+
+        button {
+            margin-top: 20px; /* Space between title and button */
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #FFD700; /* Sample color for the button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #FFA500; /* Sample color for the button hover */
         }
     </style>
 </head>
 <body>
-    <header style="height: 100px;">
-        <h1>Travel the World with Us!</h1>
+    <header>
+        <h1>Header</h1>
     </header>
     <main>
         <div class="full-page">
             <div class="overlay"></div>
             <div class="content">
-                <h2>Travelopia</h2>
+                <h2>Title</h2>
                 <button id="clickButton">Click here</button>
             </div>
         </div>
     </main>
-    <footer style="height: 100px;">
-        <p>&copy; 2024 Front-end Project</p>
+    <footer>
+        <h1>Footer</h1>
     </footer>
-    <script src="assets/js/script.js"></script>
+    <script>
+        document.getElementById("clickButton").addEventListener("click", function() {
+            alert("Hello, World!");
+        });
+    </script>
 </body>
 </html>
