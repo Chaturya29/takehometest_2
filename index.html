@@ -1,104 +1,54 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Travel Website</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page Component</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        .navbar {
-            height: 100px; 
-        }
-
-        .footer {
-            height: 100px; 
-        }
-        body {
-            background-image: url('background.jpg'); 
+        .full-page {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 200px); /* Adjust height to fill remaining space */
+            background-image: url('travel_img.jpg'); /* Image name only */
             background-size: cover;
-            background-repeat: no-repeat; 
-            font-family: 'Poppins', sans-serif; 
-            margin: 0;
-            padding: 0;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-
-        .large-button {
-            padding: 20px 40px;
-            font-size: 24px;
-            border-radius: 20px;
-            background-color: #FFD700;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
             color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s ease-in-out;
-        }
-
-        .large-button:hover {
-            background-color: #FFA500;
-        }
-
-        .menu ul {
-            display: flex;
-            align-items: center;
-            list-style-type: none;
-            padding: 0; /* Remove default padding */
-        }
-
-        .menu ul li a {
-            text-decoration: none;
-            color: #000;
-            padding: 5px 12px;
-            letter-spacing: 2px;
-            font-size: 18px;
-        }
-
-        .menu ul li a:hover {
-            border-bottom: 4px solid #000;
-            transition: 0.4s;
         }
     </style>
-    <script>
-        function showAlert() {
-            alert("Hello, world!");
-        }
-    </script>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <h1>Travelopia</h1>
+    <header style="height: 100px;">
+        <h1>Travel the World with Us!</h1>
+    </header>
+    <main>
+        <div class="full-page">
+            <div class="overlay"></div>
+            <div class="content">
+                <h2>Travelopia</h2>
+                <button id="clickButton">Click here</button>
+            </div>
         </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="signup">
-            <a href="#">Sign Up</a>
-        </div>
-    </div>
-    <div class="body">
-        <div class="heading">
-            <h1>Travel With Us</h1>
-            <br>
-            
-            <br>
-            <br>
-            <button class="large-button" onclick="showAlert()">Click Here</button>
-        </div>
-        
-        
-        </div>
-    </div>
-    <div class="footer">
-        <a href="#">Copyright</a>
-        <a href="#">Terms and Conditions</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookies</a>
-        <a href="#">Complaints</a>
-    </div>
+    </main>
+    <footer style="height: 100px;">
+        <p>&copy; 2024 Front-end Project</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
